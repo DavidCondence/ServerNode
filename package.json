@@ -1,0 +1,19 @@
+{
+  "name": "servernode",
+  "version": "1.0.0",
+  "description": "Test http requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "web",
+    "node"
+  ],
+  "author": "itson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
