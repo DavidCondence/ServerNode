@@ -1,2 +1,15 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+
+const PedidosSchema = new Schema({
+    cliente: { type: String, required: true },
+    articulos: [{
+        nombre: { type: String },
+        precio: { type: Number },
+        cantidad: { type: Number },
+        subtotal: { type: Number }
+    }],
+    total: { type: Number, rquired: true }
+}, {timestamps: true});
+
+return mongoose.model("Pedidos", PedidosSchema, "pedidos");

@@ -1,3 +1,4 @@
+const PedidosRepository = require("../persistence/repositories/PedidosRepository");
 const pedidos = [
     {id: 123, cliente: "Tony Stark", total: 1500},
     {id: 456, cliente: "Natalia Romanov", total: 3500},
@@ -6,6 +7,11 @@ const pedidos = [
 ];
 module.exports = {
     getPedidos(req, res) {
+        PedidosRepository.getPedidos().then((result) => {
+            res.status(200).json(result);
+        }).catch((err) => {
+            res.status(500).json(err)
+        })
         res.send(pedidos);
     },
     postPedidos(req, res){
