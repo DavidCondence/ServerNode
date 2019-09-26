@@ -1,23 +1,25 @@
-const PedidosRepository = require("../persistence/repositories/PedidosRepository");
-const pedidos = [
-    {id: 123, cliente: "Tony Stark", total: 1500},
-    {id: 456, cliente: "Natalia Romanov", total: 3500},
-    {id: 658, cliente: "Steve Rogers", total: 1500},
-    {id: 524, cliente: "Wanda Maximof", total: 2600}
-];
+const PedidosRepository = require("../repositories/Pedidos.repository");
+ 
 module.exports = {
     getPedidos(req, res) {
-        PedidosRepository.getPedidos().then((result) => {
-            res.status(200).json(result);
-        }).catch((err) => {
-            res.status(500).json(err)
-        })
-        res.send(pedidos);
+        try{
+            PedidosRepository.getPedidos().then((result) => {
+                res.status(200).json(result);
+            }).catch((error) => {
+                res.status(500).json(error)
+            }); 
+        } catch(error){
+
+        }
+        
     },
     postPedidos(req, res){
         let pedido = req.body;
-        pedidos.push(pedido);
-        res.send("Pedido guardado");
+        PedidosRepository.savePedidos(pedido).then((result) =>{
+            res.status(200).json(result);
+        }).catch((error) =>{
+            res.status(500).json(error)
+        }); 
     },
     putPedidos(req,res){
         let pedido = req.body;

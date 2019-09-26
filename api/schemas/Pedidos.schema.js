@@ -12,4 +12,4 @@ const PedidosSchema = new Schema({
     total: { type: Number, rquired: true }
 }, {timestamps: true});
 
-return mongoose.model("Pedidos", PedidosSchema, "pedidos");
+module.exports = mongoose.model("Pedidos", PedidosSchema, "pedidos");
