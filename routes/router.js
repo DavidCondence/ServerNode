@@ -1,7 +1,6 @@
-const express = require("express")
+const express = require("express");
 const router = express.Router();
 const pedidosController = require("../api/controllers/Pedidos.controller");
-
 
 router.get("/pedidos", pedidosController.getPedidos);
 router.post("/pedidos", pedidosController.postPedidos);

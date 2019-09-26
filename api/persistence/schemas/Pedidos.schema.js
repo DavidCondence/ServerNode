@@ -9,7 +9,7 @@ const PedidosSchema = new Schema({
         cantidad: { type: Number },
         subtotal: { type: Number }
     }],
-    total: { type: Number, rquired: true }
-}, {timestamps: true});
+    total: { type: Number, required: true }
+}, { timestamps: true });
 
 module.exports = mongoose.model("Pedidos", PedidosSchema, "pedidos");

@@ -3,7 +3,9 @@ module.exports = {
         defaultconnection: "mongodb://127.0.0.1:27017/pedidos"
     },
     emailNotification: {
-        email: "dpartida98473@alumno.itson.edu.mx",
-        pass: "12345657"
+        email: "itsontopicos8@gmail.com",
+        pass: "1ts0n123",
+        host: "",
+        port: 0
     }
-}
+};
