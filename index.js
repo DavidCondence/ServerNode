@@ -4,7 +4,7 @@ const logger = require("./utils/logger");
 const emailManager = require("./utils/emailManager");
 const uuid = require("uuid");
 const app = express();
-const port = 8080;
+const port = 8082;
 require("./api/persistence/connection/dbconnections");
 
 const bodyParser = require("body-parser");

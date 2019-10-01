@@ -4,6 +4,9 @@ const logger = require("../../../utils/logger");
 
 mongoose.connect(config.mongodb.defaultconnection, {
     reconnectTries: Number.MAX_VALUE,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     reconnectInterval: 500,
     poolSize: 10
 });
@@ -19,4 +22,3 @@ mongoose.connection.on("error", (err)=>{
 mongoose.connection.on("disconnected", ()=>{
     logger.info(`Mongoose disconnected`);
 });
-

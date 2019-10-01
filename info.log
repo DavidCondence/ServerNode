@@ -1,0 +1,43 @@
+[Wed Sep 18 2019 19:54:08 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 18 2019 19:55:46 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 18 2019 20:28:10 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 18 2019 20:29:14 GMT-0700 (GMT-07:00)] INFO { accepted: [ 'sedop@88av.net' ],
+  rejected: [],
+  envelopeTime: 276,
+  messageTime: 536,
+  messageSize: 300,
+  response: '250 2.0.0 OK  1568863671 i2sm2865648otf.19 - gsmtp',
+  envelope:
+   { from: 'itsontopicos8@gmail.com', to: [ 'sedop@88av.net' ] },
+  messageId: '<9fabebbe-1542-9a87-73a1-096c09ecf94d@gmail.com>' }
+[Wed Sep 18 2019 20:37:35 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 18 2019 20:46:17 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 18 2019 20:46:27 GMT-0700 (GMT-07:00)] INFO { accepted: [ 'sedop@88av.net' ],
+  rejected: [],
+  envelopeTime: 395,
+  messageTime: 643,
+  messageSize: 386,
+  response: '250 2.0.0 OK  1568864704 k95sm4166325pje.10 - gsmtp',
+  envelope:
+   { from: 'itsontopicos8@gmail.com', to: [ 'sedop@88av.net' ] },
+  messageId: '<52f3bbff-21a5-cb8c-fe27-6614c8b2fbe4@gmail.com>' }
+[Wed Sep 18 2019 20:48:15 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 18 2019 20:48:24 GMT-0700 (GMT-07:00)] INFO { accepted: [ 'sedop@88av.net' ],
+  rejected: [],
+  envelopeTime: 401,
+  messageTime: 647,
+  messageSize: 386,
+  response: '250 2.0.0 OK  1568864822 i7sm9791840pfd.126 - gsmtp',
+  envelope:
+   { from: 'itsontopicos8@gmail.com', to: [ 'sedop@88av.net' ] },
+  messageId: '<81ba7ebf-b1e5-8452-010e-d9d1f792acfb@gmail.com>' }
+[Wed Sep 25 2019 20:18:50 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 25 2019 20:18:50 GMT-0700 (GMT-07:00)] INFO Mongoose connected to: mongodb://127.0.0.1:27017/pedidos
+[Wed Sep 25 2019 20:24:48 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 25 2019 20:24:48 GMT-0700 (GMT-07:00)] INFO Mongoose connected to: mongodb://127.0.0.1:27017/pedidos
+[Wed Sep 25 2019 20:29:17 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 25 2019 20:29:17 GMT-0700 (GMT-07:00)] INFO Mongoose connected to: mongodb://127.0.0.1:27017/pedidos
+[Wed Sep 25 2019 20:32:46 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 25 2019 20:32:46 GMT-0700 (GMT-07:00)] INFO Mongoose connected to: mongodb://127.0.0.1:27017/pedidos
+[Wed Sep 25 2019 20:47:02 GMT-0700 (GMT-07:00)] INFO Server running at 8080
+[Wed Sep 25 2019 20:47:02 GMT-0700 (GMT-07:00)] INFO Mongoose connected to: mongodb://127.0.0.1:27017/pedidos
