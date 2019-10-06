@@ -1,31 +1,8 @@
-const Ventas = require("../schemas/Ventas.schema");
+const Productos = require("../schemas/Productos.schema");
 
-module.exports.getVentas = function(){
+module.exports.getProductos = function(){
     return new Promise((resolve, reject) => {
-        Ventas.find({}, (error, result)=>{
-            if(error){
-                reject("Trono: " + error);
-            }else{
-                resolve(result);
-            }
-        });
-    });
-} 
-module.exports.getVenta = function(ventaid) {
-    return new Promise((resolve, reject) => {
-        Ventas.findById(ventaid, (error, result)=>{
-            if(error){
-                reject("Trono: " + error);
-            }else{
-                resolve(result);
-            }
-        });
-    });
-} 
-module.exports.saveVenta = function(venta){
-    return new Promise((resolve, reject)=>{
-        const ventaAGuardar = new Ventas(venta);
-        ventaAGuardar.save((error, result)=>{
+        Productos.find({}, (error, result)=>{
             if(error){
                 reject("Trono: " + error);
             }else{
@@ -34,9 +11,9 @@ module.exports.saveVenta = function(venta){
         });
     });
 }
-module.exports.deleteVenta = function(ventaid) {
+module.exports.getProducto = function(idProducto) {
     return new Promise((resolve, reject) => {
-        Ventas.findByIdAndDelete(ventaid, (error, result)=>{
+        Productos.findById(idProducto, (error, result)=>{
             if(error){
                 reject("Trono: " + error);
             }else{
@@ -45,10 +22,11 @@ module.exports.deleteVenta = function(ventaid) {
         });
     });
 } 
-module.exports.saveVenta = function(venta){
+
+module.exports.saveProductos = function(producto){
     return new Promise((resolve, reject)=>{
-        const ventaAGuardar = new Ventas(venta);
-        ventaAGuardar.save((error, result)=>{
+        const productoAGuardar = new Productos(producto);
+        productoAGuardar.save((error, result)=>{
             if(error){
                 reject("Trono: " + error);
             }else{
@@ -57,9 +35,21 @@ module.exports.saveVenta = function(venta){
         });
     });
 }
-module.exports.putVenta = function(idventa, venta){ 
+module.exports.deleteProducto = function(productoid) { 
+    return new Promise((resolve, reject) => {
+        Productos.findByIdAndDelete(productoid, (error, result)=>{
+            if(error){
+                reject("Trono: " + error);
+            }else{
+                resolve(result);
+            }
+        });
+    });
+} 
+
+module.exports.putProducto = function(idproducto, producto){ 
     return new Promise((resolve, reject)=>{ 
-        Ventas.findByIdAndUpdate(idventa,{$set: venta},{new: true}, (error, result)=>{
+        Productos.findByIdAndUpdate(idproducto,{$set: producto},{new: true}, (error, result)=>{
             if(error){
                 reject("Trono: " + error);
             }else{

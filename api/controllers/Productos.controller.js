@@ -1,9 +1,9 @@
-const VentasRepository = require("../persistence/repositories/Ventas.repository");
+const ProductosRepository = require("../persistence/repositories/Productos.repository");
 
 module.exports = {
-    getVentas(req, res) {        
+    getProductos(req, res) {        
         try{
-            VentasRepository.getVentas().then((result)=>{
+            ProductosRepository.getProductos().then((result)=>{
                 res.status(200).json(result);
             }).catch((error)=>{
                 res.status(500).json(error);
@@ -12,10 +12,10 @@ module.exports = {
             res.status(500).json(error);
         }                     
     },
-    getVenta(req, res) {
-        let idVenta = req.params.idVenta;
+    getProducto(req, res) {
+        let idProducto = req.params.idProducto;
         try{
-            VentasRepository.getVenta(idVenta).then((result)=>{
+            ProductosRepository.getProducto(idProducto).then((result)=>{
                 res.status(200).json(result);
             }).catch((error)=>{
                 res.status(500).json(error);
@@ -24,27 +24,27 @@ module.exports = {
             res.status(500).json(error);
         }               
     },
-    postVentas(req, res){
-        let venta = req.body;
-        VentasRepository.saveVenta(venta).then((result)=>{
+    postProducto(req, res){
+        let producto = req.body;
+        ProductosRepository.saveProductos(producto).then((result)=>{
             res.status(200).json(result);
         }).catch((error)=>{
             res.status(500).json(error);
         });        
     },
-    putVenta(req, res){
-        let venta = req.body;
-        let idVenta = req.params.idVenta;
-        VentasRepository.putVenta(idVenta, venta).then((result)=>{
+    putProducto(req, res){
+        let producto = req.body;
+        let idProducto = req.params.idProducto;
+        ProductosRepository.putProducto(idProducto, producto).then((result)=>{
             res.status(200).json(result);
         }).catch((error)=>{
             res.status(500).json(error);
         });   
     },
-    deleteVenta(req, res) {
-        let idVenta = req.params.idVenta;
+    deleteProducto(req, res) {
+        let idProducto = req.params.idProducto;
         try{
-            VentasRepository.deleteVenta(idVenta).then((result)=>{
+            ProductosRepository.deleteProducto(idProducto).then((result)=>{
                 res.status(200).json("Venta eliminada");
             }).catch((error)=>{
                 res.status(500).json(error);
