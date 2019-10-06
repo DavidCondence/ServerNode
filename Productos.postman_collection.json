@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "337176fe-b18f-4afe-86e4-274bc8fb8b14",
+		"name": "Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Producto by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/productos/:idProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"productos",
+						":idProducto"
+					],
+					"variable": [
+						{
+							"key": "idProducto",
+							"value": "5d9a51de4352b80522558ef4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Producto prueba\",\n    \"precioactual\": 500, \n    \"stock\": true,\n    \"categoria\": {\n        \"nombre\": \"01020304002\",\n        \"descripcion\": \"David Emanuel\",\n        \"direccion\": \"Lazaro Mercado\"\n\t},\n\t\"proveedores\": {\n        \"rfc\": \"01020304002\",\n        \"nombre\": \"David Emanuel\",\n        \"direccion\": \"Lazaro Mercado\",\n        \"telefono\": 6555740302,\n        \"paginaweb\": \"www.google.com\"\n\t} \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/productos/:idProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"productos",
+						":idProducto"
+					],
+					"variable": [
+						{
+							"key": "idProducto",
+							"value": "5d9672c1a8a215e68eeeb5ba"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoria\": {\n        \"nombre\": \"01020304002\",\n        \"descripcion\": \"David Emanuel PArtida Conde\"\n    },\n    \"proveedores\": {\n        \"rfc\": \"01020304002\",\n        \"nombre\": \"David Emanuel\",\n        \"direccion\": \"Lazaro Mercado\",\n        \"telefono\": 6555740302,\n        \"paginaweb\": \"www.google.com\"\n    },\n    \"_id\": \"5d9a51de4352b80522558ef4\",\n    \"nombre\": \"Producto prueba\",\n    \"precioactual\": 500,\n    \"stock\": true,\n    \"createdAt\": \"2019-10-06T20:43:10.331Z\",\n    \"updatedAt\": \"2019-10-06T20:43:10.331Z\",\n    \"__v\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/productos/:idProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"productos",
+						":idProducto"
+					],
+					"variable": [
+						{
+							"key": "idProducto",
+							"value": "5d9a51de4352b80522558ef4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

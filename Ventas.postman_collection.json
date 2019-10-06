@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "18dff832-e93e-47bf-a5c9-b58b24527728",
+		"name": "Ventas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/ventas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mandar pedidos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"descuento\": 0,\n    \"montofinal\": 500, \n    \"cliente\": {\n        \"rfc\": \"01020304002\",\n        \"nombre\": \"David Emanuel\",\n        \"direccion\": \"Lazaro Mercado\",\n        \"telefono1\": \"1123456789\",\n        \"telefono2\": \"1123456789\"\n\t} \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/ventas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar venta by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8082/ventas/:idVenta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"ventas",
+						":idVenta"
+					],
+					"variable": [
+						{
+							"key": "idVenta",
+							"value": "1111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener venta by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/ventas/:idVenta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"ventas",
+						":idVenta"
+					],
+					"variable": [
+						{
+							"key": "idVenta",
+							"value": "5d9a592d03ad6f0604d8b0d2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar venta by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fecha\": \"2019-10-06T21:13:19.362Z\",\n    \"_id\": \"5d9a592d03ad6f0604d8b0d2\",\n    \"descuento\": 0,\n    \"montofinal\": 500,\n    \"cliente\": {\n        \"rfc\": \"01020304002\",\n        \"nombre\": \"David Emanuel Partida\",\n        \"direccion\": \"Lazaro Mercado\",\n        \"telefono1\": 1123456789,\n        \"telefono2\": 1123456789\n    },\n    \"createdAt\": \"2019-10-06T21:14:21.998Z\",\n    \"updatedAt\": \"2019-10-06T21:14:21.998Z\",\n    \"__v\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/ventas/:idVenta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"ventas",
+						":idVenta"
+					],
+					"variable": [
+						{
+							"key": "idVenta",
+							"value": "5d9a592d03ad6f0604d8b0d2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
